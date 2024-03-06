@@ -20,3 +20,32 @@ function printTeacher(firstName: string, lastName: string): string {
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
+
+interface StudentConstructorArgs {
+  firstName: string,
+  lastName: string
+}
+
+interface Student {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+class StudentClass implements Student {
+  firstName: string;
+  lastName: string;
+
+  constructor(args: StudentConstructorArgs) {
+    this.firstName = args.firstName;
+    this.lastName = args.lastName;
+  }
+
+  workOnHomework(): string {
+    return 'Currently working';
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
