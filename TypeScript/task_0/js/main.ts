@@ -51,7 +51,6 @@ function createTable(data: Student[], headers: string[]): HTMLElement {
     const location = row["location"];
 
     const rowsContent = [firstName, location];
-    console.log(rowsContent);
     // Create cells for each data point in the row
     for (const content of rowsContent) {
       const cell = document.createElement("td");
