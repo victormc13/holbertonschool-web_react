@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
+import '../body/body.css';
+
 
 let count = 0;
 function updateCounter() {
