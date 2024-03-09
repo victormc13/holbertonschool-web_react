@@ -9,11 +9,16 @@ module.exports = {
     body: './modules/body/body.js',
     footer: './modules/footer/footer.js',
   },
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'public'),
     publicPath: '/',
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
@@ -44,7 +49,7 @@ module.exports = {
     port: 8564,
   },
   plugins: [
-    new HtmlWebpackPlugin({title: 'Task 3'}),
+    new HtmlWebpackPlugin({ title: 'Task 3' }),
     new CleanWebpackPlugin(),
   ],
 };
