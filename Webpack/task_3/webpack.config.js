@@ -9,6 +9,7 @@ module.exports = {
     body: './modules/body/body.js',
     footer: './modules/footer/footer.js',
   },
+  devtool: "inline-source-map",
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'public'),
@@ -38,9 +39,7 @@ module.exports = {
     ],
   },
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'public')
-    },
+    contentBase: './public',
     compress: true,
     port: 8564,
   },
