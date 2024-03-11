@@ -1,15 +1,5 @@
 import $ from 'jquery';
 
-$(document).ready(() => {
-  const paragraphsContent = [
-    'Holberton Dashboard',
-    'Dashboard data for the students',
-    'Copyright - Holberton School'
-  ];
-
-  $(paragrapahsContent).each((index, value) => {
-    const newParagraph = $('<p></p>').text.value;
-
-    $('body').append(newParagraph);
-  })
-})
+$('body').append('<p>Holberton Dashboard</p>');
+$('body').append('<p>Dashboard data for the students</p>');
+$('body').append('<p>Copyright - Holberton School</p>');
