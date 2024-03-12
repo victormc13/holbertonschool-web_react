@@ -33,6 +33,7 @@
   color: black;
   border: 2px solid #e7e7e7;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .App-footer {
