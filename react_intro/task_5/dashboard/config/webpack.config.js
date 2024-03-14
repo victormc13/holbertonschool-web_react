@@ -23,10 +23,23 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(js|jsx)$/, // Match JavaScript and JSX files
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader', // Use Babel loader
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'], // Set presets
+          },
+        },
+      },
     ],
   },
   devServer: {
-    contentBase: '../dist',
+    // contentBase: '../dist',
+    static: {
+      directory: path.join(__dirname, '../dist')
+    },
     compress: true,
     open: true,
     hot: true,
