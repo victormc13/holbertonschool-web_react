@@ -1,0 +1,12 @@
+.Login-input {
+  display: flex;
+  gap: 1rem;
+}
+
+.Login-input button {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+  border-radius: 8px;
+  cursor: pointer;
+}
