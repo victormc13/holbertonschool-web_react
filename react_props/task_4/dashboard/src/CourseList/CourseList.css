@@ -1,0 +1,19 @@
+#CourseList {
+  border-collapse: separate;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+#CourseList thead tr:first-child th {
+  text-align: center;
+}
+
+#CourseList thead th {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+}
+
+#CourseList tbody td {
+  padding: 10px;
+}
