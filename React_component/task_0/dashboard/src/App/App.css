@@ -1,0 +1,16 @@
+.App {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-body {
+  border-top: 4px solid #e0354b;
+  border-bottom: 4px solid #e0354b;
+  padding: 2rem;
+}
