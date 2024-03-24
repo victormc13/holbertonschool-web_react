@@ -1,6 +1,6 @@
 import React from 'react';
 
-const withLogging = (WrappedComponent) => {
+const WithLogging = (WrappedComponent) => {
   class WithLogging extends React.Component {
     componentDidMount() {
       console.log(`Component ${WrappedComponent.name || 'Component'} mounted`);
@@ -19,4 +19,4 @@ const withLogging = (WrappedComponent) => {
   return WithLogging;
 };
 
-export default withLogging;
+export default WithLogging;
