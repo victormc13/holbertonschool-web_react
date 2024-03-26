@@ -15,20 +15,20 @@ const styles = StyleSheet.create({
     display: 'grid',
     gridTemplateRows: 'auto 1fr auto',
     minHeight: '100vh',
-    width: '100%'
+    width: '100%',
   },
   body: {
     borderTop: '4px solid #e0354b',
     borderBottom: '4px solid #e0354b',
-    padding: '2rem'
+    padding: '2rem',
   },
   footer: {
     width: '100%',
     textAlign: 'center',
     fontStyle: 'italic',
-    fontSize: '1.25rem'
-  }
-})
+    fontSize: '1.25rem',
+  },
+});
 
 class App extends React.Component {
   constructor(props) {
