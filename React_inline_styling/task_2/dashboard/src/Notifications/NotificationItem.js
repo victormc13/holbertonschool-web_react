@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 })
 
 const NotificationItem = React.memo(({ type, html, value, markAsRead, id }) => {
-  const color = type === 'default' ? css(styles.default) : css(styles.urgent)
+  const color = css(styles[type]); // apply styles based on type value
   return (
     <li
       className={color}
