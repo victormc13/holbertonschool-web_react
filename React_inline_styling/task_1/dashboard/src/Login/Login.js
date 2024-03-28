@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
   loginInput: {
     display: 'flex',
     gap: '1rem',
+    margin: '1rem 0'
   },
   loginInputButton: {
     backgroundColor: 'white',
