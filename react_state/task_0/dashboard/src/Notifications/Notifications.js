@@ -107,14 +107,6 @@ class Notifications extends React.Component {
     this.markAsRead = this.markAsRead.bind(this);
   }
 
-  handleButtonClick = () => {
-    this.props.handleHideDrawer();
-  };
-
-  handleMenuItemClick = () => {
-    this.props.handleDisplayDrawer();
-  };
-
   markAsRead(id) {
     console.log(`Notification ${id} has been marked as read`);
   }
@@ -128,7 +120,12 @@ class Notifications extends React.Component {
   }
 
   render() {
-    const { displayDrawer, listNotifications } = this.props;
+    const {
+      displayDrawer,
+      listNotifications,
+      handleDisplayDrawer,
+      handleHideDrawer,
+    } = this.props;
 
     const menuItemStyle = displayDrawer
       ? css(styles.hiddeMenuItem)
@@ -136,7 +133,7 @@ class Notifications extends React.Component {
 
     return (
       <div className={css(styles.NotificationsContainer)}>
-        <div className={menuItemStyle} onClick={this.handleMenuItemClick}>
+        <div className={menuItemStyle} onClick={handleDisplayDrawer}>
           Your notifications
         </div>
         {displayDrawer && (
@@ -144,7 +141,7 @@ class Notifications extends React.Component {
             <button
               aria-label="Close"
               className={css(styles.button)}
-              onClick={this.handleButtonClick}
+              onClick={handleHideDrawer}
             >
               <img src={closeIcon} alt="Close icon" width="16px" />
             </button>
